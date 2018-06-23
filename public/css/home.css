@@ -1,0 +1,19 @@
+html {
+    height: 100%
+}
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#nav {
+    z-index: 100;
+    position: absolute;
+    margin: 100px 0px 50px 200px;
+    left: 100px;
+}
+#map {
+    width: 100%;
+    height: 100%
+}
