@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('sandbox*********.mailgun.org'),
-        'secret' => env('91ec614dfbc78b5dc2e5167d72892ed2-0470a1f7-a9dfdb64'),
+        'domain' => env('MAILGUN_DOMAIN'),
+        'secret' => env('MAILGUN_SECRET'),
     ],
 
     'ses' => [
@@ -26,7 +26,7 @@ return [
     ],
 
     'sparkpost' => [
-        'secret' => env('5c5ed68e8208fd7f953b855e6e219fad71d26fae'),
+        'secret' => env('SPARKPOST_SECRET'),
     ],
 
     'stripe' => [

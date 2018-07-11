@@ -1,58 +1,23 @@
-<html>
 @extends('layouts.app')
-<style>
-    html {
-        height: 100%
-    }
-    body {
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
-    }
 
-    #nav {
-        z-index: 100;
-        position: absolute;
-        right: 91%;
-        top: 25%;
-    }
-    #map {
-        width: 100%;
-        height: 100%
-    }
-</style>
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
 
-<meta name="csrf-token" content="{{ csrf_token() }}">
-<head>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
-</head>
-<body>
-<div id="nav">
-    <div class="card">
-        <div class="card-header">{{"Device List"}}</div>
-        <div class="card-body">
-            <table class="table">
-                <tbody>
-        @foreach ($allData as $data)
-                    <tr>
-                <td>
-                {{$data->device_Id}}
-                </td>
-                    </tr>
-                    @endforeach
-                </tbody></table>
-            <button type="button" class="btn btn-warning btn-sm float-right">Add Device</button>
-        </div>
-        <div class="card-footer">
-
+                    You are logged in!
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<div id="map">
-    {!! $map['html'] !!}
-    {!! $map['js'] !!}
-    </div>
 @endsection
-</body>
-</html>

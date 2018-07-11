@@ -18,5 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'FormController@index')->name('formIndex');
 Route::post('/', 'FormController@saveForm')->name('form');
-
+Route::get('/tree',['uses'=>'TreeController@cats'])->name('tree');
+Route::get('/tree2', 'TreeController@iterative')->name('iterative');
